@@ -1,6 +1,19 @@
+@import url(fonts.css);
+
+:root {
+  --fprinc: SG-300;
+  --fsecon: TW-200;
+  --primary: #2E2C39;
+  --secondary: #A99DCD;
+  --third: #E1DDEB;
+  --forth: #718C6A;
+  --fifth: #F5A258;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--fsecon);
 }
 
 a {
@@ -8,87 +21,15 @@ a {
   color: #2e2c39;
 }
 
-/* Fuentes de la página */
-.titillium-web-extralight {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  
-  .titillium-web-light {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .titillium-web-regular {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .titillium-web-semibold {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .titillium-web-bold {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .titillium-web-black {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .titillium-web-extralight-italic {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 200;
-    font-style: italic;
-  }
-  
-  .titillium-web-light-italic {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .titillium-web-regular-italic {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .titillium-web-semibold-italic {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .titillium-web-bold-italic {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-
-  .space-grotesk {
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-  }
-
+/* Navbar */
 nav {
   padding: 15px 40px;
   height: 80px;
-  background-color: #A99DCD;
+  background-color: var(--secondary);
 }
 
 .nav_cont {
-  color: #2e2c39;
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -108,7 +49,7 @@ nav {
 }
 
 .nav_links a:hover{ 
-  color: #e1ddeb;
+  color: var(--third);
   transform: scale(1.3);
   transition: 0.3s;
   font-weight: bolder;
@@ -119,7 +60,44 @@ nav {
 #highlight:hover {
   color: #2e2c39;
   border-radius: 5px;
-  background-color: #e1ddeb;
+  background-color: var(--third);
+}
+
+/* Sección principal */
+h1 {
+  font-family: var(--fprinc);
+  color: var(--primary);
+}
+
+.b-contacto {
+  align-items: center;
+  background: #f5f5fa;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+  box-sizing: border-box;
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  transition: .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+  width: max-content;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+.b-contacto:hover {
+  background: #f8f8ff;
+  box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
 }
 
 @media (max-width:767px) {
@@ -158,6 +136,10 @@ nav {
 
 #highlight:hover {
   display: none;
+}
+
+.b-contacto {
+  padding: 24px;
 }
 
 }

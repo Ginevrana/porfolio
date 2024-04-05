@@ -18,7 +18,7 @@
 
 a {
   text-decoration: none;
-  color: #2e2c39;
+  color: var(--primary);
 }
 
 /* Navbar */
@@ -43,7 +43,7 @@ nav {
 
 .nav_links a{ 
   padding: 0 8px;
-  font-weight: 600;
+  font-family: TW-400;
   transform: scale(1.3);
   transition: 0.3s;
 }
@@ -52,69 +52,132 @@ nav {
   color: var(--third);
   transform: scale(1.3);
   transition: 0.3s;
-  font-weight: bolder;
-  box-shadow: 4px 6px 22px 5px rgba(207,207,207,1);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px,rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border-radius: 5px;
 }
 
 #highlight:hover {
-  color: #2e2c39;
+  color: var(--primary);
   border-radius: 5px;
   background-color: var(--third);
 }
 
 /* Sección principal */
-h1 {
-  font-family: var(--fprinc);
-  color: var(--primary);
+main { 
+  background-image: url(file:///C:/Users/Teresita/Desktop/front%20portfolio/assets/background.png);
 }
 
-.b-contacto {
+h1 {
+  font-family: SG-500;
+  font-size: 3rem;
+  color: var(--third);
+  line-height: 1em;
+  margin: 5% 0 3% 0;
+}
+
+p {
+  color: var(--secondary)
+}
+
+small {
+  color: var(--primary);
+  background-color: var(--fifth);
+  padding: 1% 4%;
+  border-radius: 10px;
+  font-family: TW-200;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  padding: 3rem 0;
+  justify-content: space-evenly;
+}
+
+.text {
+  --size: 17rem;
+  --padding: 20px;
+
+  position: relative;
+  width: calc(var(--size) - var(--padding));
+  height: calc(var(--size) / 1.1);
+  background: var(--primary);
+  padding: var(--padding);
+  margin-top: 3%;
+}
+
+.text:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--primary);
+  height: 3em;
+  width: 3em;
+}
+
+.buttons {
+  margin-top: 5%;
+  justify-content: flex-end;
+}
+
+.b- {
   align-items: center;
-  background: #f5f5fa;
-  border: 0;
-  border-radius: 8px;
-  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+  background-color: var(--secondary);
+  border-radius: 5px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,var(--secondary) 0 -3px 0 inset;
   box-sizing: border-box;
   color: var(--primary);
   cursor: pointer;
-  display: flex;
-  font-size: 1rem;
-  justify-content: center;
-  line-height: 1.5rem;
-  padding: 15px;
-  position: relative;
-  text-align: left;
-  transition: .2s;
+  display: inline-flex;
+  height: 2.2em;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: box-shadow .15s,transform .15s;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
-  white-space: pre;
-  width: max-content;
-  word-break: normal;
-  word-spacing: normal;
+  will-change: box-shadow,transform;
+  font-size: 1em;
 }
 
-.b-contacto:hover {
-  background: #f8f8ff;
-  box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
+.b-:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, 
+              rgba(45, 35, 66, 0.3) 0 7px 13px -3px, 
+              var(--third) 0 -3px 0 inset;
+  transform: translateY(-2px);
 }
 
-@media (max-width:767px) {
+.b-:active {
+  transform: translateY(2px);
+}
 
+.contacto {
+  font-family: TW-300;
+  background-color: var(--primary);
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,var(--primary) 0 -3px 0 inset;
+  color: var(--third);
+}
+
+@media (max-width:780px) {
+/* Navbar */
 .menu_ham {
   display: inherit;
-  color:#2e2c39;
+  color:var(--primary);
   font-weight: bolder;
+  z-index: 1;
 }
 
 .nav_links {
+  z-index: 2;
   position: fixed;
   left: 0;
   bottom: 0;
   right: 0;
   top: 80px;
-  background-color: #2e2c39;
+  background-color: var(--primary);
   display: grid;
   place-items: center;
   clip-path: circle(0% at top right);
@@ -142,4 +205,26 @@ h1 {
   padding: 24px;
 }
 
+/* Sección principal */
+.container {
+  flex-wrap: wrap;
+}
+
+.text {
+  --size: 28rem;
+  height: calc(var(--size) / 1.9);
+}
+
+.item2 {
+  display: none;
+}
+
+}
+
+@media (max-width: 580px) {
+  .text {
+    --size: 17rem;
+    height: calc(var(--size) / 1.1);
+  }
+  
 }
